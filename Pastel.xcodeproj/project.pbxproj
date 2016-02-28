@@ -331,7 +331,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pastel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Pastel;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sendyhalim.Pastel-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -342,7 +342,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Pastel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.Pastel;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.sendyhalim.Pastel-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -390,6 +390,7 @@
 				79D99BCF1C8348C70015131E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79D99BD01C8348C70015131E /* Build configuration list for PBXNativeTarget "PastelTests" */ = {
 			isa = XCConfigurationList;
@@ -398,6 +399,7 @@
 				79D99BD21C8348C70015131E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
