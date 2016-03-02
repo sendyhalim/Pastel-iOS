@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79664F1E1C8747D60019F1BE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1B1C8747D60019F1BE /* RxCocoa.framework */; };
+		79664F1F1C8747D60019F1BE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1C1C8747D60019F1BE /* RxSwift.framework */; };
+		79664F201C8747D60019F1BE /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1D1C8747D60019F1BE /* Swiftz.framework */; };
 		79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB31C8348C70015131E /* AppDelegate.swift */; };
 		79D99BB61C8348C70015131E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* ViewController.swift */; };
 		79D99BB91C8348C70015131E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BB71C8348C70015131E /* Main.storyboard */; };
@@ -25,6 +28,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		79664F1B1C8747D60019F1BE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		79664F1C1C8747D60019F1BE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		79664F1D1C8747D60019F1BE /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
 		79D99BB01C8348C70015131E /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99BB31C8348C70015131E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D99BB51C8348C70015131E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +47,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79664F1F1C8747D60019F1BE /* RxSwift.framework in Frameworks */,
+				79664F1E1C8747D60019F1BE /* RxCocoa.framework in Frameworks */,
+				79664F201C8747D60019F1BE /* Swiftz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,9 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79664F1A1C8747C40019F1BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79664F1B1C8747D60019F1BE /* RxCocoa.framework */,
+				79664F1C1C8747D60019F1BE /* RxSwift.framework */,
+				79664F1D1C8747D60019F1BE /* Swiftz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79D99BA71C8348C70015131E = {
 			isa = PBXGroup;
 			children = (
+				79664F1A1C8747C40019F1BE /* Frameworks */,
 				79D99BB21C8348C70015131E /* Pastel */,
 				79D99BC71C8348C70015131E /* PastelTests */,
 				79D99BB11C8348C70015131E /* Products */,
@@ -103,6 +123,8 @@
 				79D99BAC1C8348C70015131E /* Sources */,
 				79D99BAD1C8348C70015131E /* Frameworks */,
 				79D99BAE1C8348C70015131E /* Resources */,
+				79664F121C8747080019F1BE /* [Run Script - Carthage] Copy Frameworks */,
+				79664F131C87471D0019F1BE /* [Run Script - Swiftlint] Lint */,
 			);
 			buildRules = (
 			);
@@ -190,6 +212,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		79664F121C8747080019F1BE /* [Run Script - Carthage] Copy Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Swiftz.framework",
+			);
+			name = "[Run Script - Carthage] Copy Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		79664F131C87471D0019F1BE /* [Run Script - Swiftlint] Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Run Script - Swiftlint] Lint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		79D99BAC1C8348C70015131E /* Sources */ = {
@@ -325,6 +381,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pastel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sendyhalim.Pastel-iOS";
@@ -336,6 +396,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = Pastel/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sendyhalim.Pastel-iOS";
