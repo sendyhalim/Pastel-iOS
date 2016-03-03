@@ -10,6 +10,7 @@
 		79664F1E1C8747D60019F1BE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1B1C8747D60019F1BE /* RxCocoa.framework */; };
 		79664F1F1C8747D60019F1BE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1C1C8747D60019F1BE /* RxSwift.framework */; };
 		79664F201C8747D60019F1BE /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1D1C8747D60019F1BE /* Swiftz.framework */; };
+		797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */; };
 		79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB31C8348C70015131E /* AppDelegate.swift */; };
 		79D99BB61C8348C70015131E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* ViewController.swift */; };
 		79D99BB91C8348C70015131E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BB71C8348C70015131E /* Main.storyboard */; };
@@ -31,6 +32,7 @@
 		79664F1B1C8747D60019F1BE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		79664F1C1C8747D60019F1BE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		79664F1D1C8747D60019F1BE /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
+		797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
 		79D99BB01C8348C70015131E /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99BB31C8348C70015131E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D99BB51C8348C70015131E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -73,6 +75,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		797CF11D1C889BD3009AFBD8 /* Pasteboard */ = {
+			isa = PBXGroup;
+			children = (
+				797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */,
+			);
+			path = Pasteboard;
+			sourceTree = "<group>";
+		};
 		79D99BA71C8348C70015131E = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		79D99BB21C8348C70015131E /* Pastel */ = {
 			isa = PBXGroup;
 			children = (
+				797CF11D1C889BD3009AFBD8 /* Pasteboard */,
 				79D99BB31C8348C70015131E /* AppDelegate.swift */,
 				79D99BB51C8348C70015131E /* ViewController.swift */,
 				79D99BB71C8348C70015131E /* Main.storyboard */,
@@ -254,6 +265,7 @@
 			files = (
 				79D99BB61C8348C70015131E /* ViewController.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,
+				797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
