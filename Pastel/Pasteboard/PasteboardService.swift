@@ -8,10 +8,28 @@
 
 import UIKit
 import RxSwift
-import Swiftz
+import RxCocoa
 
 /// A service for interacting directly with system's pasteboard/clipboard
 final class PasteboardService {
-  let pasteboard = UIPasteboard.generalPasteboard()
+  private struct PasteboardEvent {
+    static let changed = "UIPasteboardChangedNotification"
+  }
+
   let pasteboardItems = Variable<[PasteboardItem]>([])
+
+  private(set) var running = false
+  private let pasteboardChanged: Observable<NSNotification> = {
+    NSNotificationCenter.defaultCenter().rx_notification(PasteboardEvent.changed, object: nil)
+  }()
+
+  func startPolling() {
+    guard running else {
+      return
+    }
+
+    running = true
+
+    // TODO: create paste board item
+  }
 }
