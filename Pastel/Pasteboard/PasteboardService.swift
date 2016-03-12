@@ -68,7 +68,6 @@ struct UIPasteboardEvent {
 final class PasteboardService {
   let pasteboardItems = Variable<[PasteboardItem]>([])
 
-  private(set) var running = false
   let pasteboardStream: Observable<Optional<PasteboardItem>> = {
     NSNotificationCenter
       .defaultCenter()
@@ -77,13 +76,4 @@ final class PasteboardService {
         $0 >>- pasteboard >>- pasteboardContent >>- pasteboardItem
       }
   }()
-
-  func startPolling() {
-    guard running else {
-      return
-    }
-
-    running = true
-    // TODO: create paste board item
-  }
 }
