@@ -15,12 +15,14 @@ import Swiftz
 ///  Transform the given `UIPasteboard` to a PasteboardItem.
 ///  The content type created will be based on Uniform Type Identifier.
 ///  Resources:
+///  - https://goo.gl/huiIlB
+///  - https://goo.gl/WkCVBc
 ///  - https://goo.gl/giVwKj
 ///  - https://goo.gl/QSl4wf
 ///
 ///  - parameter pasteboard: UIPasteboard
 ///
-///  - returns: Optional<PasteboardItem>
+///  - returns: PasteboardItem?
 func pasteboardItem(pasteboard: UIPasteboard) -> PasteboardItem? {
   if let string = pasteboard.valueForPasteboardType(kUTTypeUTF8PlainText as String) as? String {
     return PasteboardItem(content: .Text(string))
