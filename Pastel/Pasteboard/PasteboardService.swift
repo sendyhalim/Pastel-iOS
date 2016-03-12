@@ -22,6 +22,10 @@ func pasteboardItem(content: AnyObject) -> PasteboardItem? {
     return PasteboardItem(content: .Text(string))
   }
 
+  if let image = content as? UIImage {
+    return PasteboardItem(content: .Image(image))
+  }
+
   return .None
 }
 
