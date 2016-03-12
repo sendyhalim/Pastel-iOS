@@ -33,19 +33,19 @@ func pasteboard(notification: NSNotification) -> UIPasteboard? {
   return notification.object as? UIPasteboard
 }
 
+struct UIPasteboardEvent {
+  static let changed = "UIPasteboardChangedNotification"
+}
+
 /// A service for interacting directly with system's pasteboard/clipboard
 final class PasteboardService {
-  private struct PasteboardEvent {
-    static let changed = "UIPasteboardChangedNotification"
-  }
-
   let pasteboardItems = Variable<[PasteboardItem]>([])
 
   private(set) var running = false
   let pasteboardStream: Observable<Optional<PasteboardItem>> = {
     NSNotificationCenter
       .defaultCenter()
-      .rx_notification(PasteboardEvent.changed, object: nil)
+      .rx_notification(UIPasteboardEvent.changed, object: nil)
       .map { $0 >>- pasteboard >>- pasteboardItem }
   }()
 
