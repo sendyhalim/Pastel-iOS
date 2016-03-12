@@ -12,7 +12,20 @@ import RxSwift
 import RxCocoa
 import Swiftz
 
-///  Transform the given `UIPasteboard` to a PasteboardItem.
+///  Transform the given `AnyObject` to a `PasteboardItem`.
+///
+///  - parameter pasteboard: `AnyObject`
+///
+///  - returns: `PasteboardItem?`
+func pasteboardItem(content: AnyObject) -> PasteboardItem? {
+  if let string = content as? String {
+    return PasteboardItem(content: .Text(string))
+  }
+
+  return .None
+}
+
+///  Extract the content of `UIPasteboard`.
 ///  The content type created will be based on Uniform Type Identifier.
 ///  Resources:
 ///  - https://goo.gl/huiIlB
@@ -20,17 +33,29 @@ import Swiftz
 ///  - https://goo.gl/giVwKj
 ///  - https://goo.gl/QSl4wf
 ///
-///  - parameter pasteboard: UIPasteboard
+///  - parameter pasteboard: `UIPasteboard`
 ///
-///  - returns: PasteboardItem?
-func pasteboardItem(pasteboard: UIPasteboard) -> PasteboardItem? {
-  if let string = pasteboard.valueForPasteboardType(kUTTypeUTF8PlainText as String) as? String {
-    return PasteboardItem(content: .Text(string))
+///  - returns: `AnyObject?`
+func pasteboardContent(pasteboard: UIPasteboard) -> AnyObject? {
+  let types = [
+    kUTTypeUTF8PlainText,
+    kUTTypeImage
+  ]
+
+  for t in types {
+    if let content = pasteboard.valueForPasteboardType(t as String) {
+      return content
+    }
   }
 
   return .None
 }
 
+///  Get the `UIPasteboard` from the given `NSNotification`
+///
+///  - parameter notification: `NSNotification`
+///
+///  - returns: `UIPasteboard?`
 func pasteboard(notification: NSNotification) -> UIPasteboard? {
   return notification.object as? UIPasteboard
 }
@@ -48,7 +73,9 @@ final class PasteboardService {
     NSNotificationCenter
       .defaultCenter()
       .rx_notification(UIPasteboardEvent.changed, object: nil)
-      .map { $0 >>- pasteboard >>- pasteboardItem }
+      .map {
+        $0 >>- pasteboard >>- pasteboardContent >>- pasteboardItem
+      }
   }()
 
   func startPolling() {
