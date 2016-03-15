@@ -12,6 +12,11 @@
 		79664F201C8747D60019F1BE /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1D1C8747D60019F1BE /* Swiftz.framework */; };
 		797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */; };
 		797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */; };
+		79D3092D1C9850DE001FB322 /* PasteboardItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3092C1C9850DE001FB322 /* PasteboardItemSpec.swift */; };
+		79D309301C9850FC001FB322 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D3092E1C9850FC001FB322 /* Quick.framework */; };
+		79D309311C9850FC001FB322 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D3092F1C9850FC001FB322 /* Nimble.framework */; };
+		79D309381C985327001FB322 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D3092E1C9850FC001FB322 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		79D309391C98532C001FB322 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D3092F1C9850FC001FB322 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB31C8348C70015131E /* AppDelegate.swift */; };
 		79D99BB61C8348C70015131E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* ViewController.swift */; };
 		79D99BB91C8348C70015131E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BB71C8348C70015131E /* Main.storyboard */; };
@@ -29,12 +34,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		79D309321C985118001FB322 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				79D309391C98532C001FB322 /* Nimble.framework in CopyFiles */,
+				79D309381C985327001FB322 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		79664F1B1C8747D60019F1BE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		79664F1C1C8747D60019F1BE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		79664F1D1C8747D60019F1BE /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
 		797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
+		79D3092C1C9850DE001FB322 /* PasteboardItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemSpec.swift; sourceTree = "<group>"; };
+		79D3092E1C9850FC001FB322 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		79D3092F1C9850FC001FB322 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79D99BB01C8348C70015131E /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99BB31C8348C70015131E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79D99BB51C8348C70015131E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +83,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D309311C9850FC001FB322 /* Nimble.framework in Frameworks */,
+				79D309301C9850FC001FB322 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +94,8 @@
 		79664F1A1C8747C40019F1BE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				79D3092E1C9850FC001FB322 /* Quick.framework */,
+				79D3092F1C9850FC001FB322 /* Nimble.framework */,
 				79664F1B1C8747D60019F1BE /* RxCocoa.framework */,
 				79664F1C1C8747D60019F1BE /* RxSwift.framework */,
 				79664F1D1C8747D60019F1BE /* Swiftz.framework */,
@@ -82,6 +108,14 @@
 			children = (
 				797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */,
 				797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */,
+			);
+			path = Pasteboard;
+			sourceTree = "<group>";
+		};
+		79D3092B1C9850C0001FB322 /* Pasteboard */ = {
+			isa = PBXGroup;
+			children = (
+				79D3092C1C9850DE001FB322 /* PasteboardItemSpec.swift */,
 			);
 			path = Pasteboard;
 			sourceTree = "<group>";
@@ -122,6 +156,7 @@
 		79D99BC71C8348C70015131E /* PastelTests */ = {
 			isa = PBXGroup;
 			children = (
+				79D3092B1C9850C0001FB322 /* Pasteboard */,
 				79D99BCA1C8348C70015131E /* Info.plist */,
 			);
 			path = PastelTests;
@@ -156,6 +191,7 @@
 				79D99BC01C8348C70015131E /* Sources */,
 				79D99BC11C8348C70015131E /* Frameworks */,
 				79D99BC21C8348C70015131E /* Resources */,
+				79D309321C985118001FB322 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -277,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79D3092D1C9850DE001FB322 /* PasteboardItemSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,10 +464,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PastelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pastel.app/Pastel";
 			};
 			name = Debug;
@@ -439,6 +482,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PastelTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sendyhalim.PastelTests;
