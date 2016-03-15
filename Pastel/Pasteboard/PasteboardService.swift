@@ -10,6 +10,7 @@ import UIKit
 import MobileCoreServices
 import RxSwift
 import RxCocoa
+import RxOptional
 import Swiftz
 
 ///  Transform the given `AnyObject` to a `PasteboardItem`.
@@ -74,14 +75,15 @@ struct UIPasteboardEvent {
 
 /// A service for interacting directly with system's pasteboard/clipboard
 final class PasteboardService {
-  let pasteboardItems = Variable<[PasteboardItem]>([])
+  let pasteboardItems: Observable<PasteboardItem?>
 
-  let pasteboardStream: Observable<Optional<PasteboardItem>> = {
-    NSNotificationCenter
+  init() {
+    pasteboardItems = NSNotificationCenter
       .defaultCenter()
       .rx_notification(UIPasteboardEvent.changed, object: nil)
       .map {
         $0 >>- pasteboard >>- pasteboardContent >>- pasteboardItem
       }
-  }()
+      .filterNil()
+  }
 }
