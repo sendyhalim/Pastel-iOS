@@ -46,8 +46,8 @@ func pasteboardContent(pasteboard: UIPasteboard) -> AnyObject? {
     kUTTypeImage
   ]
 
-  for t in types {
-    if let content = pasteboard.valueForPasteboardType(t as String) {
+  for type in types {
+    if let content = pasteboard.valueForPasteboardType(type as String) {
       return content
     }
   }
