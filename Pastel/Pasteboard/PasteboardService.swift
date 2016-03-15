@@ -19,6 +19,10 @@ import Swiftz
 ///  - returns: `PasteboardItem?`
 func pasteboardItem(content: AnyObject) -> PasteboardItem? {
   if let string = content as? String {
+    if let url = NSURL(string: string) {
+      return PasteboardItem(content: .URL(url))
+    }
+
     return PasteboardItem(content: .Text(string))
   }
 
