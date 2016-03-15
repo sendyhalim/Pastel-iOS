@@ -7,18 +7,20 @@
 //
 
 import UIKit
+import RxSwift
 
 class ViewController: UIViewController {
   let pasteboardService = PasteboardService()
+  let disposeBag = DisposeBag()
 
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     pasteboardService
-      .pasteboardStream
+      .pasteboardItems
       .subscribeNext {
         print($0)
-      }
+      } >>> disposeBag
   }
 
   override func didReceiveMemoryWarning() {
