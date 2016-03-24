@@ -1,4 +1,4 @@
-github "Quick/Nimble" "cef2b3fc8cbbbcf2c90b14244763fc3d192d3636"
-github "Quick/Quick" "d30f9e93402b6fcc7013c86afeb77da4c38e9f27"
-github "ReactiveX/RxSwift" "698a50b381ef1323a153bb065adac0c37b5f1755"
-github "typelift/Swiftz" "b556b7441e79fe5d40078c6af5705bbef6c84464"
+github "Quick/Nimble" "758cc9b80e0978d7b86b7729f90cd52ee270cb02"
+github "Quick/Quick" "3a1d88fb81476001c62f086dbd94bb0f5354f1a3"
+github "ReactiveX/RxSwift" "6df77da4745338fa13986d044f6b764af4c3d99f"
+github "typelift/Swiftz" "27fdcade6101752a265666936316aeb199229673"
