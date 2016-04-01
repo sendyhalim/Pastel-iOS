@@ -19,8 +19,7 @@
 		79D309381C985327001FB322 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D3092E1C9850FC001FB322 /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D309391C98532C001FB322 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 79D3092F1C9850FC001FB322 /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB31C8348C70015131E /* AppDelegate.swift */; };
-		79D99BB61C8348C70015131E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* ViewController.swift */; };
-		79D99BB91C8348C70015131E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BB71C8348C70015131E /* Main.storyboard */; };
+		79D99BB61C8348C70015131E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* RootViewController.swift */; };
 		79D99BBB1C8348C70015131E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BBA1C8348C70015131E /* Assets.xcassets */; };
 		79D99BBE1C8348C70015131E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BBC1C8348C70015131E /* LaunchScreen.storyboard */; };
 		85658887DA9A59724D0238C6 /* Pods_Pastel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F323203A8FE210C6E67609 /* Pods_Pastel.framework */; };
@@ -65,8 +64,7 @@
 		79D3092F1C9850FC001FB322 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		79D99BB01C8348C70015131E /* Pastel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pastel.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99BB31C8348C70015131E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		79D99BB51C8348C70015131E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		79D99BB81C8348C70015131E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		79D99BB51C8348C70015131E /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		79D99BBA1C8348C70015131E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		79D99BBD1C8348C70015131E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79D99BBF1C8348C70015131E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -162,8 +160,7 @@
 				797C7C881C988C5200506D1E /* Extensions */,
 				797CF11D1C889BD3009AFBD8 /* Pasteboard */,
 				79D99BB31C8348C70015131E /* AppDelegate.swift */,
-				79D99BB51C8348C70015131E /* ViewController.swift */,
-				79D99BB71C8348C70015131E /* Main.storyboard */,
+				79D99BB51C8348C70015131E /* RootViewController.swift */,
 				79D99BBA1C8348C70015131E /* Assets.xcassets */,
 				79D99BBC1C8348C70015131E /* LaunchScreen.storyboard */,
 				79D99BBF1C8348C70015131E /* Info.plist */,
@@ -196,14 +193,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 79D99BCD1C8348C70015131E /* Build configuration list for PBXNativeTarget "Pastel" */;
 			buildPhases = (
-				2D0949DFEE94C73BA9C74476 /* Check Pods Manifest.lock */,
+				2D0949DFEE94C73BA9C74476 /* 📦 Check Pods Manifest.lock */,
 				79D99BAC1C8348C70015131E /* Sources */,
 				79D99BAD1C8348C70015131E /* Frameworks */,
 				79D99BAE1C8348C70015131E /* Resources */,
 				79664F121C8747080019F1BE /* [Run Script - Carthage] Copy Frameworks */,
 				79664F131C87471D0019F1BE /* [Run Script - Swiftlint] Lint */,
-				90A2DF7CCD3C87FCCF9542AF /* Embed Pods Frameworks */,
-				EA5A58DABEC754568C8D12D9 /* Copy Pods Resources */,
+				90A2DF7CCD3C87FCCF9542AF /* 📦 Embed Pods Frameworks */,
+				EA5A58DABEC754568C8D12D9 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -280,7 +277,6 @@
 			files = (
 				79D99BBE1C8348C70015131E /* LaunchScreen.storyboard in Resources */,
 				79D99BBB1C8348C70015131E /* Assets.xcassets in Resources */,
-				79D99BB91C8348C70015131E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,14 +290,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2D0949DFEE94C73BA9C74476 /* Check Pods Manifest.lock */ = {
+		2D0949DFEE94C73BA9C74476 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -340,14 +336,14 @@
 			shellPath = /bin/sh;
 			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
-		90A2DF7CCD3C87FCCF9542AF /* Embed Pods Frameworks */ = {
+		90A2DF7CCD3C87FCCF9542AF /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,14 +351,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Pastel/Pods-Pastel-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		EA5A58DABEC754568C8D12D9 /* Copy Pods Resources */ = {
+		EA5A58DABEC754568C8D12D9 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Copy Pods Resources";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */,
-				79D99BB61C8348C70015131E /* ViewController.swift in Sources */,
+				79D99BB61C8348C70015131E /* RootViewController.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,
 				797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */,
 				797C7C8A1C988C6F00506D1E /* Disposable+Operator.swift in Sources */,
@@ -404,14 +400,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		79D99BB71C8348C70015131E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				79D99BB81C8348C70015131E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		79D99BBC1C8348C70015131E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
