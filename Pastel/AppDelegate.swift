@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?
   ) -> Bool {
     // Override point for customization after application launch.
-    window!.rootViewController = RootViewController()
+    window!.rootViewController = RootViewController(nibName: "RootViewController", bundle: nil)
     window!.makeKeyAndVisible()
     return true
   }
