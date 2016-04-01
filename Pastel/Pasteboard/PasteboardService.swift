@@ -75,15 +75,21 @@ struct UIPasteboardEvent {
 
 /// A service for interacting directly with system's pasteboard/clipboard
 final class PasteboardService {
-  let pasteboardItems: Observable<PasteboardItem?>
+  let pasteboardItems = Variable<Array<PasteboardItem>>([])
+  let disposeBag = DisposeBag()
 
   init() {
-    pasteboardItems = NSNotificationCenter
+    NSNotificationCenter
       .defaultCenter()
       .rx_notification(UIPasteboardEvent.changed, object: nil)
       .map {
         $0 >>- pasteboard >>- pasteboardContent >>- pasteboardItem
       }
       .filterNil()
+      .subscribeNext { [weak self] in
+        guard let `self` = self else { return }
+
+        self.pasteboardItems.value = self.pasteboardItems.value.cons($0)
+      } >>> disposeBag
   }
 }
