@@ -13,7 +13,9 @@
 		797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */; };
 		797C7C8A1C988C6F00506D1E /* Disposable+Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797C7C891C988C6F00506D1E /* Disposable+Operator.swift */; };
 		797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */; };
-		79C9950E1CAED9A10080223F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9950D1CAED9A10080223F /* RootViewController.xib */; };
+		79C995101CAEDD970080223F /* PasteboardCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C9950F1CAEDD970080223F /* PasteboardCollectionViewController.xib */; };
+		79C995121CAEDE2A0080223F /* PasteboardCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C995111CAEDE2A0080223F /* PasteboardCollectionViewController.swift */; };
+		79C995141CAEE0E80080223F /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C995131CAEE0E80080223F /* RootViewController.xib */; };
 		79D3092D1C9850DE001FB322 /* PasteboardItemSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D3092C1C9850DE001FB322 /* PasteboardItemSpec.swift */; };
 		79D309301C9850FC001FB322 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D3092E1C9850FC001FB322 /* Quick.framework */; };
 		79D309311C9850FC001FB322 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79D3092F1C9850FC001FB322 /* Nimble.framework */; };
@@ -60,7 +62,9 @@
 		797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardService.swift; sourceTree = "<group>"; };
 		797C7C891C988C6F00506D1E /* Disposable+Operator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Disposable+Operator.swift"; sourceTree = "<group>"; };
 		797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItem.swift; sourceTree = "<group>"; };
-		79C9950D1CAED9A10080223F /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		79C9950F1CAEDD970080223F /* PasteboardCollectionViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardCollectionViewController.xib; sourceTree = "<group>"; };
+		79C995111CAEDE2A0080223F /* PasteboardCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardCollectionViewController.swift; sourceTree = "<group>"; };
+		79C995131CAEE0E80080223F /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
 		79D3092C1C9850DE001FB322 /* PasteboardItemSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemSpec.swift; sourceTree = "<group>"; };
 		79D3092E1C9850FC001FB322 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		79D3092F1C9850FC001FB322 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
@@ -131,6 +135,7 @@
 		79C995051CAED5180080223F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				79C995111CAEDE2A0080223F /* PasteboardCollectionViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -146,7 +151,8 @@
 		79C9950A1CAED8600080223F /* xibs */ = {
 			isa = PBXGroup;
 			children = (
-				79C9950D1CAED9A10080223F /* RootViewController.xib */,
+				79C995131CAEE0E80080223F /* RootViewController.xib */,
+				79C9950F1CAEDD970080223F /* PasteboardCollectionViewController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -304,7 +310,8 @@
 			files = (
 				79D99BBE1C8348C70015131E /* LaunchScreen.storyboard in Resources */,
 				79D99BBB1C8348C70015131E /* Assets.xcassets in Resources */,
-				79C9950E1CAED9A10080223F /* RootViewController.xib in Resources */,
+				79C995141CAEE0E80080223F /* RootViewController.xib in Resources */,
+				79C995101CAEDD970080223F /* PasteboardCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +411,7 @@
 				797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */,
 				79D99BB61C8348C70015131E /* RootViewController.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,
+				79C995121CAEDE2A0080223F /* PasteboardCollectionViewController.swift in Sources */,
 				797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */,
 				797C7C8A1C988C6F00506D1E /* Disposable+Operator.swift in Sources */,
 			);

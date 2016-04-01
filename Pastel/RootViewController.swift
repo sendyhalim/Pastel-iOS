@@ -10,21 +10,14 @@ import UIKit
 import RxSwift
 
 class RootViewController: UIViewController {
-  let pasteboardService = PasteboardService()
-  let disposeBag = DisposeBag()
+  let pasteboardCollectionViewController = {
+    return PasteboardCollectionViewController(
+      nibName: "PasteboardCollectionViewController",
+      bundle: nil
+    )
+  }()
 
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    pasteboardService
-      .pasteboardItems
-      .subscribeNext {
-        print($0)
-      } >>> disposeBag
-  }
-
-  override func didReceiveMemoryWarning() {
-    super.didReceiveMemoryWarning()
-    // Dispose of any resources that can be recreated.
+  override func awakeFromNib() {
+    view.addSubview(pasteboardCollectionViewController.view)
   }
 }
