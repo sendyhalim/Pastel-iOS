@@ -17,7 +17,9 @@ class RootViewController: UIViewController {
     )
   }()
 
-  override func awakeFromNib() {
+  override func viewDidLoad() {
+    super.viewDidLoad()
+
     view.addSubview(pasteboardCollectionViewController.view)
   }
 }
