@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		791D01E61CB0F672006C6775 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791D01E51CB0F672006C6775 /* R.generated.swift */; };
 		792E83931CAEE91F0035239C /* PasteboardItemTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792E83921CAEE91F0035239C /* PasteboardItemTextCell.xib */; };
 		792E83951CAEEAC60035239C /* PasteboardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E83941CAEEAC60035239C /* PasteboardItemCell.swift */; };
 		79664F1E1C8747D60019F1BE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1B1C8747D60019F1BE /* RxCocoa.framework */; };
@@ -58,6 +59,7 @@
 		461ACCA7EFF7BD04171960CA /* Pods-Pastel.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pastel.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Pastel/Pods-Pastel.debug.xcconfig"; sourceTree = "<group>"; };
 		50ED8539845423968227DE42 /* Pods-Pastel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pastel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pastel/Pods-Pastel.release.xcconfig"; sourceTree = "<group>"; };
 		74F323203A8FE210C6E67609 /* Pods_Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		791D01E51CB0F672006C6775 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		792E83921CAEE91F0035239C /* PasteboardItemTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardItemTextCell.xib; sourceTree = "<group>"; };
 		792E83941CAEEAC60035239C /* PasteboardItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemCell.swift; sourceTree = "<group>"; };
 		79664F1B1C8747D60019F1BE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 				797CF11D1C889BD3009AFBD8 /* Pasteboard */,
 				79D99BB31C8348C70015131E /* AppDelegate.swift */,
 				79D99BB51C8348C70015131E /* RootViewController.swift */,
+				791D01E51CB0F672006C6775 /* R.generated.swift */,
 				79D99BBA1C8348C70015131E /* Assets.xcassets */,
 				79D99BBC1C8348C70015131E /* LaunchScreen.storyboard */,
 				79D99BBF1C8348C70015131E /* Info.plist */,
@@ -233,6 +236,7 @@
 			buildConfigurationList = 79D99BCD1C8348C70015131E /* Build configuration list for PBXNativeTarget "Pastel" */;
 			buildPhases = (
 				2D0949DFEE94C73BA9C74476 /* 📦 Check Pods Manifest.lock */,
+				791D01E41CB0F5E2006C6775 /* [Run Script - R.swift] Generate R.Swift */,
 				79D99BAC1C8348C70015131E /* Sources */,
 				79D99BAD1C8348C70015131E /* Frameworks */,
 				79D99BAE1C8348C70015131E /* Resources */,
@@ -347,6 +351,20 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		791D01E41CB0F5E2006C6775 /* [Run Script - R.swift] Generate R.Swift */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[Run Script - R.swift] Generate R.Swift";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+		};
 		79664F121C8747080019F1BE /* [Run Script - Carthage] Copy Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -418,6 +436,7 @@
 				792E83951CAEEAC60035239C /* PasteboardItemCell.swift in Sources */,
 				797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */,
 				79D99BB61C8348C70015131E /* RootViewController.swift in Sources */,
+				791D01E61CB0F672006C6775 /* R.generated.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,
 				79C995121CAEDE2A0080223F /* PasteboardCollectionViewController.swift in Sources */,
 				797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */,

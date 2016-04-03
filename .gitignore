@@ -1,3 +1,6 @@
 # Ignored directories
 Carthage/
 Pods/
+
+# Ignored files
+*.generated.swift
