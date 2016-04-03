@@ -15,17 +15,15 @@ class PasteboardCollectionViewController: UIViewController {
   let pasteboardService = PasteboardService()
   let disposeBag = DisposeBag()
 
-  private struct Identifier {
-    static let ItemTextCell = "PasteboardItemTextCell"
-  }
-
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    let nib = UINib(nibName: "PasteboardItemTextCell", bundle: nil)
     collectionView.delegate = self
     collectionView.dataSource = self
-    collectionView.registerNib(nib, forCellWithReuseIdentifier: Identifier.ItemTextCell)
+    collectionView.registerNib(
+      R.nib.pasteboardItemTextCell(),
+      forCellWithReuseIdentifier: R.nib.pasteboardItemTextCell.name
+    )
 
     // Do any additional setup after loading the view, typically from a nib.
     pasteboardService
@@ -54,10 +52,9 @@ extension PasteboardCollectionViewController: UICollectionViewDataSource {
     cellForItemAtIndexPath indexPath: NSIndexPath
   ) -> UICollectionViewCell {
     var cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-      Identifier.ItemTextCell,
+      R.nib.pasteboardItemTextCell.name,
       forIndexPath: indexPath
     ) as? PasteboardItemCell
-
     if cell == nil {
       cell = PasteboardItemCell()
     }
