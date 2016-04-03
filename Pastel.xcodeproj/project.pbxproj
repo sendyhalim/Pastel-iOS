@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		792E83931CAEE91F0035239C /* PasteboardItemTextCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 792E83921CAEE91F0035239C /* PasteboardItemTextCell.xib */; };
-		792E83951CAEEAC60035239C /* PasteboardItemTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E83941CAEEAC60035239C /* PasteboardItemTextCell.swift */; };
+		792E83951CAEEAC60035239C /* PasteboardItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 792E83941CAEEAC60035239C /* PasteboardItemCell.swift */; };
 		79664F1E1C8747D60019F1BE /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1B1C8747D60019F1BE /* RxCocoa.framework */; };
 		79664F1F1C8747D60019F1BE /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1C1C8747D60019F1BE /* RxSwift.framework */; };
 		79664F201C8747D60019F1BE /* Swiftz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79664F1D1C8747D60019F1BE /* Swiftz.framework */; };
@@ -59,7 +59,7 @@
 		50ED8539845423968227DE42 /* Pods-Pastel.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pastel.release.xcconfig"; path = "Pods/Target Support Files/Pods-Pastel/Pods-Pastel.release.xcconfig"; sourceTree = "<group>"; };
 		74F323203A8FE210C6E67609 /* Pods_Pastel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Pastel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		792E83921CAEE91F0035239C /* PasteboardItemTextCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasteboardItemTextCell.xib; sourceTree = "<group>"; };
-		792E83941CAEEAC60035239C /* PasteboardItemTextCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemTextCell.swift; sourceTree = "<group>"; };
+		792E83941CAEEAC60035239C /* PasteboardItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardItemCell.swift; sourceTree = "<group>"; };
 		79664F1B1C8747D60019F1BE /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		79664F1C1C8747D60019F1BE /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		79664F1D1C8747D60019F1BE /* Swiftz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Swiftz.framework; path = Carthage/Build/iOS/Swiftz.framework; sourceTree = "<group>"; };
@@ -148,7 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				79C9950A1CAED8600080223F /* xibs */,
-				792E83941CAEEAC60035239C /* PasteboardItemTextCell.swift */,
+				792E83941CAEEAC60035239C /* PasteboardItemCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -415,7 +415,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				792E83951CAEEAC60035239C /* PasteboardItemTextCell.swift in Sources */,
+				792E83951CAEEAC60035239C /* PasteboardItemCell.swift in Sources */,
 				797A74C41C8DDD1D00DBBDE0 /* PasteboardService.swift in Sources */,
 				79D99BB61C8348C70015131E /* RootViewController.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,

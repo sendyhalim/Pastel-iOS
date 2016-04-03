@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Kq3-Ba-vKI">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="Kq3-Ba-vKI" customClass="PasteboardItemCell" customModule="Pastel" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -31,13 +31,10 @@
                 <constraint firstItem="gbs-lh-Acn" firstAttribute="trailing" secondItem="Kq3-Ba-vKI" secondAttribute="trailingMargin" id="tME-XI-1D7"/>
             </constraints>
             <size key="customSize" width="235" height="162"/>
+            <connections>
+                <outlet property="textLabel" destination="gbs-lh-Acn" id="w2W-Nq-hWF"/>
+            </connections>
             <point key="canvasLocation" x="226" y="449"/>
         </collectionViewCell>
-        <placeholder id="1nn-P1-Rgg" customClass="PasteboardItemTextCell" customModule="Pastel" customModuleProvider="target">
-            <nil key="placeholderIdentifier"/>
-            <connections>
-                <outlet property="textLabel" destination="gbs-lh-Acn" id="aNp-ja-r74"/>
-            </connections>
-        </placeholder>
     </objects>
 </document>
