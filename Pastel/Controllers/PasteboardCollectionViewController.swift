@@ -56,7 +56,7 @@ extension PasteboardCollectionViewController: UICollectionViewDataSource {
       forIndexPath: indexPath
     ) as? PasteboardItemCell) ?? PasteboardItemCell()
 
-    switch (content) {
+    switch content {
     case .Text(let str):
       cell.textLabel.text = str
 
