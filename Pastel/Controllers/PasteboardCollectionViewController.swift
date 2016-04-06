@@ -12,8 +12,8 @@ import RxSwift
 class PasteboardCollectionViewController: UIViewController {
   @IBOutlet weak var collectionView: UICollectionView!
 
-  let pasteboardService = PasteboardService()
   let disposeBag = DisposeBag()
+  let vm = PasteboardListViewModel()
 
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,7 +26,7 @@ class PasteboardCollectionViewController: UIViewController {
     )
 
     // Do any additional setup after loading the view, typically from a nib.
-    pasteboardService
+    vm.service
       .pasteboardItems
       .asObservable()
       .subscribeNext {
@@ -44,28 +44,38 @@ extension PasteboardCollectionViewController: UICollectionViewDataSource {
     collectionView: UICollectionView,
     numberOfItemsInSection section: Int
   ) -> Int {
-    return pasteboardService.pasteboardItems.value.count
+    return vm.service.pasteboardItems.value.count
   }
 
-  func getCellForItemAtIndexPath(indexPath: NSIndexPath) -> PasteboardItemCell {
-    if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-        R.nib.pasteboardItemTextCell.name,
-        forIndexPath: indexPath
-      ) as? PasteboardItemCell {
-        return cell
+  func cellForItemContent(
+    content: PasteboardItemContent,
+    indexPath: NSIndexPath
+  ) -> PasteboardItemCell {
+    let cell = (collectionView.dequeueReusableCellWithReuseIdentifier(
+      R.nib.pasteboardItemTextCell.name,
+      forIndexPath: indexPath
+    ) as? PasteboardItemCell) ?? PasteboardItemCell()
+
+    switch (content) {
+    case .Text(let str):
+      cell.textLabel.text = str
+
+    case .URL(let url):
+      cell.textLabel.text = url.description
+
+    default:
+      cell.textLabel.text = "Not implemented yet"
     }
 
-    return PasteboardItemCell()
+    return cell
   }
 
   func collectionView(
     collectionView: UICollectionView,
     cellForItemAtIndexPath indexPath: NSIndexPath
   ) -> UICollectionViewCell {
-    let cell = getCellForItemAtIndexPath(indexPath)
+    let item = vm[indexPath.row]
 
-    cell.textLabel.text = "hi there"
-
-    return cell
+    return cellForItemContent(item.content, indexPath: indexPath)
   }
 }
