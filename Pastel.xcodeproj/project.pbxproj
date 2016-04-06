@@ -28,6 +28,7 @@
 		79D99BB61C8348C70015131E /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D99BB51C8348C70015131E /* RootViewController.swift */; };
 		79D99BBB1C8348C70015131E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BBA1C8348C70015131E /* Assets.xcassets */; };
 		79D99BBE1C8348C70015131E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79D99BBC1C8348C70015131E /* LaunchScreen.storyboard */; };
+		79DDC2771CB56C210003B9E6 /* PasteboardListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79DDC2761CB56C210003B9E6 /* PasteboardListViewModel.swift */; };
 		85658887DA9A59724D0238C6 /* Pods_Pastel.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74F323203A8FE210C6E67609 /* Pods_Pastel.framework */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		79D99BBF1C8348C70015131E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79D99BC41C8348C70015131E /* PastelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PastelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79D99BCA1C8348C70015131E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79DDC2761CB56C210003B9E6 /* PasteboardListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasteboardListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 			children = (
 				797CF11E1C889BEC009AFBD8 /* PasteboardItem.swift */,
 				797A74C31C8DDD1D00DBBDE0 /* PasteboardService.swift */,
+				79DDC2761CB56C210003B9E6 /* PasteboardListViewModel.swift */,
 			);
 			path = Pasteboard;
 			sourceTree = "<group>";
@@ -438,6 +441,7 @@
 				79D99BB61C8348C70015131E /* RootViewController.swift in Sources */,
 				791D01E61CB0F672006C6775 /* R.generated.swift in Sources */,
 				79D99BB41C8348C70015131E /* AppDelegate.swift in Sources */,
+				79DDC2771CB56C210003B9E6 /* PasteboardListViewModel.swift in Sources */,
 				79C995121CAEDE2A0080223F /* PasteboardCollectionViewController.swift in Sources */,
 				797CF11F1C889BEC009AFBD8 /* PasteboardItem.swift in Sources */,
 				797C7C8A1C988C6F00506D1E /* Disposable+Operator.swift in Sources */,
