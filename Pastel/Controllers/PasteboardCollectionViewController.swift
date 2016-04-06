@@ -47,20 +47,25 @@ extension PasteboardCollectionViewController: UICollectionViewDataSource {
     return pasteboardService.pasteboardItems.value.count
   }
 
+  func getCellForItemAtIndexPath(indexPath: NSIndexPath) -> PasteboardItemCell {
+    if let cell = collectionView.dequeueReusableCellWithReuseIdentifier(
+        R.nib.pasteboardItemTextCell.name,
+        forIndexPath: indexPath
+      ) as? PasteboardItemCell {
+        return cell
+    }
+
+    return PasteboardItemCell()
+  }
+
   func collectionView(
     collectionView: UICollectionView,
     cellForItemAtIndexPath indexPath: NSIndexPath
   ) -> UICollectionViewCell {
-    var cell = collectionView.dequeueReusableCellWithReuseIdentifier(
-      R.nib.pasteboardItemTextCell.name,
-      forIndexPath: indexPath
-    ) as? PasteboardItemCell
-    if cell == nil {
-      cell = PasteboardItemCell()
-    }
+    let cell = getCellForItemAtIndexPath(indexPath)
 
-    cell!.textLabel.text = "hi there"
+    cell.textLabel.text = "hi there"
 
-    return cell!
+    return cell
   }
 }
